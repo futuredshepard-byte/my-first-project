@@ -1,3 +1,3 @@
 # project
 
-voting app!
+voting app
