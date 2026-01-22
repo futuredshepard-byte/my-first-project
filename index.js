@@ -1,5 +1,7 @@
 const menuToggle = document.getElementById('menu-toggle');
 const navMenu = document.querySelector('nav ul');
+const regBtn = document.getElementById('reg-btn');
+const candidateBtn = document.getElementById('candidate-btn')
 
 
 menuToggle.addEventListener('click', (e) => {
@@ -26,3 +28,10 @@ function searchText() {
         }
     }
 
+regBtn.addEventListener('click', () => {
+    window.location.href = 'register.html';
+});
+
+candidateBtn.addEventListener('click', () => {
+    window.location.href = 'candidate.html';
+});

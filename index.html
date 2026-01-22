@@ -12,49 +12,75 @@
       <h1 id="header-h1">STAR-VOTING-COMPANY</h1>
 
       <div class="header-right">
-
-       <div id="menu-toggle">☰</div>
-        <form onsubmit="event.preventDefault(); searchText();">
-        <input type="search" id="searchInput" placeholder="search">
-   <button type="button" onclick="searchText()">Search</button>
-      </form>
-        <img src="logo (2).png" alt="LOGO" class="logo" />
-        </div>
-
-    <nav>
+    
+      </div>
+      <nav>
         <ul>
-          <li>
+          <!-- <li>
             <a href="about.html">About</a>
-          </li>
-          <li>
+          </li> -->
+          <!-- <li>
             <a href="index.html">Home</a>
-          </li>
+          </li> -->
           <li>
             <a href="guide.html">Guide to Voting</a>
           </li>
           <li>
             <a href="safe.html">Your vote is safe</a>
           </li>
-    <li>
-            <a href="/register.html">Register to Vote</a>
-    </li>
+          <li><a href="about.html">About Star.vote</a></li>
         </ul>
       </nav>
+        <div id="menu-toggle">☰</div>
+       <form onsubmit="event.preventDefault(); searchText();">
+          <input type="search" id="searchInput" placeholder="search" />
+          <button type="button" id="searchBtn" onclick="searchText()">Search</button>
+        </form>
+       <img src="hero sec 2 piczzzzzzzz.jpg" alt="LOGO" class="logo" />
     </header>
 
     <section class="hero">
-  <div class="glass">
-    <div class="hero-text">
-      <h2>Register to vote or update your registration</h2>
-      <p>Once you register you can vote in elections</p>
-      <button>Register Here!</button>
-    </div>
+      <div class="glass">
+         <div class="hero-image">
+          <img src="LOGO.png" alt="Hero Image" />
+        </div>
+        <div class="hero-text">
+          <h1>Register to vote, or update your registration</h1>
+          <p>Once you register you can vote in elections</p>
+          <button id="reg-btn">Register Here!</button>
+        </div>
 
-    <div class="hero-image">
-      <img src="LOGO.png" alt="Hero Image">
+       
+      </div>
+    </section>
+
+    <section class="hero">
+      <div class="glass secondary">
+        <div class="hero-text">
+          <h1>Register as a candidate</h1>
+          <p style="color: wheat;">All candidates must register to participate in elections</p>
+          <button id="candidate-btn">Register Here!</button>
+        </div>
+
+        <div class="hero-image">
+          
+        </div>
+      </div>
+    </section>
+    <footer>
+    <div class="footer-image">
+        <img src="footer-logo.png" alt="footer image">
     </div>
-  </div>
-</section>
+    
+    <p>&copy; 2024 STAR-VOTING-COMPANY. All rights reserved.</p>
+    
+    <div class="footer-list">
+        <ul>
+          
+            <!-- <li><a href="register.html">Register to vote</a></li> -->
+        </ul>
+    </div>
+</footer>
 
     <script src="index.js"></script>
   </body>

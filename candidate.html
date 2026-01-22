@@ -26,16 +26,16 @@
     </header>
 
     <section>
-      <h2>Register To Vote</h2>
-      <p class="p">Fill out the form below to register for voting. And all voter information is kept private and secure.</p>
-      <p class="p">Note: All voters must be at least 18 years old.</p>
+      <h2>Register as a Candidate</h2>
+      <p class="p">Fill out the form below to register as a candidate. And all candidate most meet our terms and conditions to be a candidate.</p>
+      <p class="p">Note: All candidates must be at least 18 years old.</p>
 
       <form class="reg-form">
 
         <label for="surname">Surname:</label>
         <input type="text" id="surname" name="surname" required>
 
-        <label for="firstname">Firstname:</label>
+          <label for="firstname">Firstname:</label>
         <input type="text" id="firstname" name="firstname" required>
 
         <label for="lastname">Lastname:</label>
@@ -47,8 +47,7 @@
         <label for="age">Age:</label>
         <input type="number" id="age" name="age" required>
 
-         <label for="voters-number">Voters-Number:</label>
-        <input type="text" id="voters-number" name="voters-number" required>
+       
 
          <label for="gender">Gender:</label>
         <input type="gender" id="gender" name="gender" required>
@@ -59,12 +58,29 @@
          <label for="state">state:</label>
         <input type="state" id="state" name="state" required>
 
+        <label for="profile-pic">Profile Picture</label>
+<input type="file" id="profile-pic" name="profile-pic" accept="image/*">
+
+          <label for="Resume/CV">Resume/CV:</label>
+        <input type="file" id="resume/CV" name="resume/CV" required>
+
+      <label for="area-of-interest">Area of interest</label>
+<select name="area-of-interest" id="area-of-interest">
+    <option value="" disabled selected></option>
+    <option value="Politics">Politics</option>
+    <option value="Entertainment">Entertainment</option>
+    <option value="Workplace">Workplace</option>
+    <option value="club orsociety">Club or Society</option>
+    <option value="school council">School council</option>
+</select>
+
         <button class="reg-vote-btn">Register</button>
       </form>
     </section>
 
 
-   
+
+    
       <footer>
     <div class="footer-image">
         <img src="footer-logo.png" alt="footer image">
