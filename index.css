@@ -1,5 +1,5 @@
 body {
-  background-color: beige;
+  /* background-color: beige; */
   margin: 0;
   padding: 0;
   min-height: 100vh;
@@ -112,8 +112,8 @@ nav ul li a {
   align-items: center;
   justify-content: space-between;
   padding: 40px;
-  background: linear-gradient(90deg, rgba(245, 245, 245, 1));
-  margin-top: 20px;
+  /* background: linear-gradient(90deg, rgba(245, 245, 245, 1));
+  margin-top: 20px; */
 }
 
 .hero2 {
@@ -121,13 +121,13 @@ nav ul li a {
   align-items: center;
   justify-content: space-between;
   padding: 80px;
-  background: linear-gradient(90deg, rgba(245, 245, 245, 1));
+  /* background: linear-gradient(90deg, rgba(245, 245, 245, 1)); */
   margin-top: 15px;
 }
 
 .hero2-img {
   display: flex;
-  mask-image: radial-gradient(ellipse at center, white 40%, transparent 100%);
+  /* mask-image: radial-gradient(ellipse at center, white 40%, transparent 100%); */
   justify-self: center;
   align-items: center;
 }
@@ -136,7 +136,7 @@ nav ul li a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, rgba(245, 245, 245, 1));
+  /* background: linear-gradient(90deg, rgba(245, 245, 245, 1)); */
 }
 
 .glass {
@@ -147,11 +147,13 @@ nav ul li a {
   border-radius: 20px;
   background: rgba(245, 245, 245, 0.25);
   backdrop-filter: blur(14px);
-  webkit-backdrop-filter: blur(14px);
+  /* webkit-backdrop-filter: blur(14px); */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+   border: solid, white 5px;
 }
 
 .glass.secondary {
+  background: transparent;
   background:
     linear-gradient(
       to right,
@@ -167,8 +169,9 @@ nav ul li a {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-.hero-text {
-  max-width: 50%;
+.hero-text h1,
+.hero-text p {
+  color: black;
 }
 
 .hero-text h1 {
@@ -176,16 +179,12 @@ nav ul li a {
   margin-bottom: 20px;
   color: brown;
 }
+
 .hero-text p {
   font-size: 18px;
   line-height: 1.6;
-  color: black;
-  /* margin-left: 1px; */
 }
-.hero-p {
-  margin-bottom: 1px;
-  align-self: start;
-}
+
 
 .hero-text button {
   margin-top: 20px;
@@ -215,7 +214,7 @@ nav ul li a {
 }
 } */
 
-.reg-form {
+#reg-form {
   display: grid;
   max-width: 500px;
   margin: 0 auto;
@@ -225,6 +224,8 @@ nav ul li a {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   gap: 10px;
 }
+
+
 
 .reg-vote-btn {
   padding: 12px 20px;
@@ -313,23 +314,6 @@ footer {
   position: relative;
 }
 
-.footer-list a {
-  text-decoration: none;
-  color: brown;
-}
-
-.footer-list li {
-  margin-bottom: 10px;
-}
-
-.footer-list ul {
-  /* list-style: none; */
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {

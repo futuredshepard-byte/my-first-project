@@ -4,8 +4,6 @@ const menuToggle = document.getElementById("menu-toggle");
 const navMenu = document.querySelector("nav ul");
 const regBtn = document.getElementById("reg-btn");
 const candidateBtn = document.getElementById("candidate-btn");
-// const form = document.querySelector(".reg-form");
-// const regFormBtn = document.getElementById("reg-vote-btn")
 const registerBtn = document.getElementById("candidate-register-btn");
 const deleteAllBtn = document.getElementById("delete-all-btn");
 
@@ -155,9 +153,35 @@ function displayCandidate() {
       <p class="candidate-gender">⚧ Gender: ${candidate.gender}</p>
       <p class="candidate-location">📍 ${candidate.location}</p>
       <p class="candidate-interest">🎯 Area of Interest: ${candidate.areaOfInterest}</p>
+      <button class="vote-btn" data-id="${candidate.id}" data-name="${candidate.fullName}">
+        Vote For This Candidate
+      </button>
     `;
 
     container.appendChild(card);
+  });
+
+  
+  handleVoting();
+}
+
+function handleVoting() {
+  const voteButtons = document.querySelectorAll('.vote-btn');
+  
+  voteButtons.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      const candidateName = e.target.dataset.name;
+      
+      console.log(`Vote recorded for: ${candidateName}`);
+      
+      e.target.textContent = "Vote Recorded ✓";
+      e.target.disabled = true;
+      
+      // Redirect after 1 second
+      setTimeout(() => {
+        window.location.href = 'thankyou.html';
+      }, 1000);
+    });
   });
 }
 
@@ -172,6 +196,18 @@ if (deleteAllBtn) {
     }
   });
 }
+
+const form = document.getElementById("reg-form")
+form.addEventListener('submit', (e) => {
+  e.preventDefault()
+
+  console.log(form)
+
+  setTimeout(() => {
+    window.location.href = 'voting.html'
+  }, 1000)
+})
+
 
 
 
