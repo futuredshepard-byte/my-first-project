@@ -142,28 +142,32 @@ function displayCandidate() {
     return;
   }
 
-  candidates.forEach(function (candidate) {
-    const card = document.createElement("div");
-    card.className = "candidate-card";
+  // Add a small delay
+  setTimeout(() => {
+    candidates.forEach(function (candidate) {
+      const card = document.createElement("div");
+      card.className = "candidate-card";
 
-    card.innerHTML = `
-      <h3 class="candidate-name">${candidate.fullName}</h3>
-      <p class="candidate-email">📧 ${candidate.email}</p>
-      <p class="candidate-age">👤 Age: ${candidate.age}</p>
-      <p class="candidate-gender">⚧ Gender: ${candidate.gender}</p>
-      <p class="candidate-location">📍 ${candidate.location}</p>
-      <p class="candidate-interest">🎯 Area of Interest: ${candidate.areaOfInterest}</p>
-      <button class="vote-btn" data-id="${candidate.id}" data-name="${candidate.fullName}">
-        Vote For This Candidate
-      </button>
-    `;
+      card.innerHTML = `
+        <h3 class="candidate-name">${candidate.fullName}</h3>
+        <p class="candidate-email">📧 ${candidate.email}</p>
+        <p class="candidate-age">👤 Age: ${candidate.age}</p>
+        <p class="candidate-gender">⚧ Gender: ${candidate.gender}</p>
+        <p class="candidate-location">📍 ${candidate.location}</p>
+        <p class="candidate-interest">🎯 Area of Interest: ${candidate.areaOfInterest}</p>
+        <button class="vote-btn" data-id="${candidate.id}" data-name="${candidate.fullName}">
+          Vote For This Candidate
+        </button>
+      `;
 
-    container.appendChild(card);
-  });
+      container.appendChild(card);
+    });
 
-  
-  handleVoting();
+    handleVoting();
+  }, 100);  // 100ms delay
 }
+
+// window.addEventListener("DOMContentLoaded", displayCandidate);//////
 
 function handleVoting() {
   const voteButtons = document.querySelectorAll('.vote-btn');
@@ -177,7 +181,7 @@ function handleVoting() {
       e.target.textContent = "Vote Recorded ✓";
       e.target.disabled = true;
       
-      // Redirect after 1 second
+  
       setTimeout(() => {
         window.location.href = 'thankyou.html';
       }, 1000);

@@ -31,13 +31,33 @@ h3 {
   align-items: center;
 }
 
+/*GLOBAL BUTTONS*/
+
+.allbtn {
+  padding: 12px 20px;
+  border: none;
+  background-color: blue;
+  color: white;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
 li {
   margin-left: 070px;
+}
+
+a {
+  color: darkblue;
+  font-size: 20px;
+  transition: all 0.5s ease-in 0.1s;
 }
 
 a:hover {
   text-decoration: underline;
   color: purple;
+  font-size: 25px;
 }
 
 header {
@@ -97,7 +117,7 @@ nav ul.show-menu {
 
 nav ul li a {
   text-decoration: none;
-  color: brown;
+  /* color: brown; */
   font-weight: bold;
   padding: 10px;
   display: block;
@@ -107,37 +127,20 @@ nav ul li a {
   margin-right: 10px;
 }
 
+
+
+
+/* HERO FOR INDEX.HTML */
+
 .hero {
   /* display: flex; */
   align-items: center;
   justify-content: space-between;
   padding: 40px;
-  /* background: linear-gradient(90deg, rgba(245, 245, 245, 1));
-  margin-top: 20px; */
+  background: linear-gradient(90deg, rgba(245, 245, 245, 1));
+  margin-top: 20px;
 }
 
-.hero2 {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 80px;
-  /* background: linear-gradient(90deg, rgba(245, 245, 245, 1)); */
-  margin-top: 15px;
-}
-
-.hero2-img {
-  display: flex;
-  /* mask-image: radial-gradient(ellipse at center, white 40%, transparent 100%); */
-  justify-self: center;
-  align-items: center;
-}
-
-.hero-about {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* background: linear-gradient(90deg, rgba(245, 245, 245, 1)); */
-}
 
 .glass {
   display: flex;
@@ -149,11 +152,17 @@ nav ul li a {
   backdrop-filter: blur(14px);
   /* webkit-backdrop-filter: blur(14px); */
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
-   border: solid, white 5px;
+  border:
+    solid,
+    white 5px;
+    
+}
+
+.hero-image {
+ 
 }
 
 .glass.secondary {
-  background: transparent;
   background:
     linear-gradient(
       to right,
@@ -167,12 +176,10 @@ nav ul li a {
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+   animation: float 2s ease-in-out infinite;
 }
 
-.hero-text h1,
-.hero-text p {
-  color: black;
-}
+
 
 .hero-text h1 {
   font-size: 48px;
@@ -180,39 +187,128 @@ nav ul li a {
   color: brown;
 }
 
-.hero-text p {
-  font-size: 18px;
-  line-height: 1.6;
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
 
+/*  HERO FOR INDEX.HTML */
 
-.hero-text button {
-  margin-top: 20px;
-  padding: 12px 24px;
-  border: none;
-  background: blue;
-  color: orange;
-  cursor: pointer;
-  border-radius: 6px;
+
+/* HERO FOR GUIDE.HTML AND ABOUT.HTML*/
+
+.hero-about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, rgba(245, 245, 245, 1));
 }
 
-.hero.image img {
-  max-width: 380px;
+.hero2 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 80px;
+  background: linear-gradient(90deg, rgba(245, 245, 245, 1));
+  margin-top: 15px;
+}
+
+.hero2-img {
+  display: flex;
+  mask-image: radial-gradient(ellipse at center, white 40%, transparent 100%);
+  justify-self: center;
+  align-items: center;
+}
+
+/* HERO FOR GUIDE.HTML AND ABOUT.HTML */
+
+
+/* HERO FOR THANKS.HTML */
+
+.hero-thanks {
+  background: url(thankyou-landing-pic.png);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.hero-thanks::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  animation: float 4s ease-in-out infinite;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  animation: fadeIn 1s ease-in;
 }
 
-/* @keyframes float {
-    0% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-15px);
-    }
-    100% {
-        transform: translateY(0);
+.hero-thanks > * {
+  position: relative;
+  z-index: 2;
+  color: white;
+  animation: slideUp 0.8s ease-out;
 }
-} */
+
+.thanks {
+  font-size: 4em;
+  font-family: italic;
+  color: bisque;
+  animation: zoomIn 0.8s ease-out;
+}
+
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* END OF THANKS.HTML */
+
+/* CANDIDATE.HTML */
 
 #reg-form {
   display: grid;
@@ -225,22 +321,15 @@ nav ul li a {
   gap: 10px;
 }
 
+/* END OF CANDIDATE.HTML */
 
 
-.reg-vote-btn {
-  padding: 12px 20px;
-  border: none;
-  background-color: blue;
-  color: white;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 16px;
-  margin-top: 20px;
-}
+
+/* END OF REGISTER.HTML */
 
 .candidates-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
   padding: 20px;
 }
@@ -252,9 +341,7 @@ nav ul li a {
   padding: 16px;
   text-align: center;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s,
-    box-shadow 0.3s;
+  background-color: pink;
 }
 
 .candidate-card:hover {
@@ -298,9 +385,16 @@ nav ul li a {
   border-radius: 5px;
   transition: background-color 0.3s;
 }
-
+.vote-btn {
+  display: inline-block;
+  font-size: bold;
+  background-color: darkblue;
+  color: whitesmoke;
+  margin-top: 2px;
+  padding: 10px;
+}
 .candidate-resume:hover {
-  background-color: #555;
+  background-color: blue;
 }
 
 footer {
@@ -313,7 +407,6 @@ footer {
   background-color: darkblue;
   position: relative;
 }
-
 
 /* MOBILE RESPONSIVE */
 @media (max-width: 768px) {
