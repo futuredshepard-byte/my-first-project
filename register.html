@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -14,60 +14,67 @@
       <div class="header-right">
         <div id="menu-toggle">☰</div>
         <nav>
-<ul>
+          <ul>
             <li><a href="index.html">Home</a></li>
-          <li><a href="guide.html">Guide to Voting</a></li>
-          <li>   <a href="safe.html">Your vote is safe</a></li>
-           <li><a href="about.html">About Star.vote</a></li>
-        </ul>
+            <li><a href="guide.html">Guide to Voting</a></li>
+            <li><a href="safe.html">Your vote is safe</a></li>
+            <li><a href="about.html">About Star.vote</a></li>
+          </ul>
         </nav>
-         <img src="hero sec 2 piczzzzzzzz.jpg" alt="LOGO" class="logo" />
+        <img src="hero sec 2 piczzzzzzzz.jpg" alt="LOGO" class="logo" />
       </div>
     </header>
 
     <section>
       <h2>Register To Vote</h2>
-      <p class="p">Fill out the form below to register for voting. And all voter information is kept private and secure.</p>
+      <p class="p">
+        Fill out the form below to register for voting. And all voter
+        information is kept private and secure.
+      </p>
       <p class="p">Note: All voters must be at least 18 years old.</p>
-      
 
       <form id="reg-form">
         <label for="surname">Surname:</label>
-        <input type="text" id="surname" name="surname" required>
+        <input type="text" id="surname" name="surname" required />
 
         <label for="firstname">Firstname:</label>
-        <input type="text" id="firstname" name="firstname" required>
+        <input type="text" id="firstname" name="firstname" required />
 
         <label for="lastname">Lastname:</label>
-        <input type="text" id="lastname" name="lastname" required>
+        <input type="text" id="lastname" name="lastname" required />
 
         <label for="email">Email:</label>
-        <input type="text" id="email" name="email" required>
+        <input type="text" id="email" name="email" required />
 
+
+        <label for="voters-number">Voters-Number:</label>
+        <input type="number" id="voters-number" name="voters-number" required />
+
+        <label for="country">Country:</label>
+        <input type="text" id="country" name="country" required />
+
+        <label for="state">state:</label>
+        <input type="text" id="state" name="state" required />
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="" disabled selected>Select your gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+
+        
         <label for="age">Age:</label>
-        <input type="number" id="age" name="age" required>
-
-         <label for="voters-number">Voters-Number:</label>
-        <input type="number" id="voters-number" name="voters-number" required>
-
-         <label for="gender">Gender:</label>
-        <input type="text" id="gender" name="gender" required>
-
-         <label for="country">Country:</label>
-        <input type="text" id="country" name="country" required>
-
-         <label for="state">state:</label>
-        <input type="text" id="state" name="state" required>
+        <input type="number" id="age" name="age" required />
 
         <button id="reg-vote-btn" class="allbtn">Register</button>
       </form>
     </section>
-   <footer>
-    <div class="footer-image">
-        <img src="footer-logo.png" alt="footer image">
-    </div>
-    <p>&copy; 2024 STAR-VOTING-COMPANY. All rights reserved.</p>
-</footer>
+    <footer>
+      <div class="footer-image">
+        <img src="footer-logo.png" alt="footer image" />
+      </div>
+      <p>&copy; 2024 STAR-VOTING-COMPANY. All rights reserved.</p>
+    </footer>
     <script src="index.js"></script>
   </body>
 </html>
